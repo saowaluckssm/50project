@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.magic {
+  background-color: #798777;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  letter-spacing: 1px;
+  z-index: 100;
+  
+}
+
+.magic:focus {
+  outline: none;
+  
+}
+
+.magic:active {
+  transform: translateY(8px);
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 500px;
+  width: 500px;
+  position: relative;
+  transition: 0.4s ease;
+
+}
+
+.boxes.big {
+  width: 600px;
+  height: 600px;
+  
+}
+
+.boxes.big .box {
+  transform: rotate(360deg);
+}
+
+
+
+.box {
+  background-image: url("https://images.unsplash.com/photo-1575305695773-47b747c42fd1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80");
+  background-repeat: no-repeat;
+  background-size: 500px 500px;
+  position: relative;
+  height: 125px;
+  width: 125px;
+  transition: 0.4s ease;
+}
+
+.box::after {
+  content: "";
+  background-color: #bdd2b6;
+  position: absolute;
+  top: 8px;
+  right: -15px;
+  height: 100%;
+  width: 15px;
+  transform: skewY(45deg);
+}
+
+.box::before {
+  content: "";
+  background-color:  #798777;
+  position: absolute;
+  bottom: -15px;
+  left: 7px;
+  height: 15px;
+  width: 100%;
+  transform: skewX(45deg);
+ 
+}
